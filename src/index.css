@@ -4,8 +4,10 @@
 /* font-family: "Outfit", sans-serif; */
 /* font-family: "Young Serif", serif; */
 
-body{
-  background-color: hsl(30, 54%, 90%)
+body {
+  background-color: hsl(30, 54%, 90%);
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -16,9 +18,9 @@ body{
   background-color: white;
   border-radius: 15px;
   display: flex;
-  margin: 0 auto;
   flex-direction: column;
-  align-content: center;
+  align-items: center; /* Ajustado para centralizar os itens */
+  margin: 0 auto;
   max-width: 650px;
 }
 
@@ -27,13 +29,12 @@ body{
   border-radius: 10px;
 }
 
-.serifeTitle {
+.serifeTitle, .serife {
   font-family: "Young Serif", serif;
 }
 
 .serife {
-  font-family: "Young Serif", serif;
-  color: hsl(14, 45%, 36%)
+  color: hsl(14, 45%, 36%);
 }
 
 .h3collor {
@@ -42,18 +43,18 @@ body{
 
 .time {
   background-color: hsl(330, 100%, 98%);
-  padding-left: 1.5rem;
+  padding: 1rem;
   border-radius: 15px;
+  width: 100%;
 }
 
 .time li {
-  padding: 0.5rem;
-  padding-left: 1rem;
+  padding: 0.5rem 0;
 }
 
 .colorBullets {
   list-style: none;
-  padding-left: 0; 
+  padding-left: 0;
 }
 
 .colorBullets li {
@@ -94,17 +95,18 @@ body{
   left: 0;
   top: 0;
   font-size: 1.2em;
-  line-height: 1.2
+  line-height: 1.2;
 }
 
 .table {
-  padding-left: 1.9rem;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .tableColor {
   text-align: center;
   color: hsl(14, 45%, 36%);
-  padding-left: 15rem;
+  padding: 12px;
 }
 
 .ingredient {
@@ -114,10 +116,21 @@ body{
 
 td {
   padding: 12px;
-  border-bottom: 2px solid hsl(30, 18%, 87%)
+  border-bottom: 2px solid hsl(30, 18%, 87%);
 }
 
 
+@media (max-width: 767px) {
+  .container {
+    padding: 1rem;
+    max-width: 100%; 
+  }
 
+  .time {
+    padding: 1rem;
+  }
 
-
+  .tableColor {
+    padding-left: 0;
+  }
+}
